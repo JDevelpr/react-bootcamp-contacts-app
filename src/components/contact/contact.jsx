@@ -3,6 +3,7 @@ import "../../assets/styles/contact.css";
 import photoUser from "../../assets/img/user-photo-profile.jpg";
 import ButtonContactRemove from "./buttons/buttonRemoveContact";
 import ButtonOptionsContact from "./buttons/buttonOptionsContact";
+import withMountingTimeLogging from "../hoc/withMountingTimeLogging.jsx";
 
 function Contact({ isAFavoriteContact }) {
   return (
@@ -25,4 +26,5 @@ function Contact({ isAFavoriteContact }) {
   );
 }
 
-export default Contact;
+
+export default withMountingTimeLogging(Contact);
