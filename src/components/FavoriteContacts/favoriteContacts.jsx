@@ -16,7 +16,6 @@ function FavoriteContacts() {
         <Contact isAFavoriteContact={true} />
         <Contact isAFavoriteContact={true} />
         <Contact isAFavoriteContact={true} />
-        <Contact isAFavoriteContact={true} />
         <Contact isAFavoriteContact={false} />
         <Contact isAFavoriteContact={false} />
         <Contact isAFavoriteContact={false} />

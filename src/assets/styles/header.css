@@ -58,6 +58,11 @@
   border: none;
   border-radius: 7px;
   font-size: 14px;
+  transition: ease-in-out 0.4s;
+}
+
+.header__button--green:hover {
+  background-color: #c1d72fb9;
 }
 
 .header__link--green {
