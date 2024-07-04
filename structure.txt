@@ -1,0 +1,44 @@
+src/
+├── components/
+│   ├── ContactList/
+│   │   ├── ContactList.js
+│   │   ├── Contact.js
+│   │   └── ...
+│   ├── FavoriteContacts/
+│   │   ├── FavoriteContacts.js
+│   │   ├── FavoriteContact.js
+│   │   └── ...
+│   ├── ContactForm/
+│   │   ├── ContactForm.js
+│   │   └── ...
+│   └── ...
+├── pages/
+│   ├── ContactListPage/
+│   │   ├── ContactListPage.js
+│   │   └── ...
+│   ├── FavoriteContactsPage/
+│   │   ├── FavoriteContactsPage.js
+│   │   └── ...
+│   └── ...
+├── redux/
+│   ├── actions/
+│   │   ├── contactActions.js
+│   │   ├── favoriteActions.js
+│   │   └── ...
+│   ├── reducers/
+│   │   ├── contactReducer.js
+│   │   ├── favoriteReducer.js
+│   │   └── ...
+│   ├── store.js
+│   └── ...
+├── services/
+│   ├── api.js
+│   └── ...
+├── styles/
+│   ├── global.css
+│   └── ...
+├── utils/
+│   ├── helpers.js
+│   └── ...
+├── App.js
+└── index.js
