@@ -1,0 +1,120 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+.new-contact-form {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.new-contact-form__form {
+  width: 300px;
+  height: 320px;
+  background-color: #c1d72f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.new-contact-form__inputs {
+  width: 290px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.new-contact-form__input {
+  width: 100%;
+  height: 43px;
+  border-radius: 5px 5px 0px 0px;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.548);
+  padding: 0px 23px;
+  box-sizing: border-box;
+  background-color: #d7e57a;
+}
+
+.new-contact-form__checkbox-group {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-contact-form__label {
+  font-size: 14px;
+}
+
+.new-contact-form__checkbox {
+  width: 14px;
+  height: 14px;
+}
+
+.new-contact-form__button {
+  width: 60px;
+  height: 26px;
+  border: none;
+  background-color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-top: -30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (min-width: 375px) {
+  .new-contact-form__form {
+    width: 320px;
+    height: 320px;
+  }
+
+  .new-contact-form__inputs {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 425px) {
+  .new-contact-form__form {
+    width: 370px;
+    height: 350px;
+  }
+  .new-contact-form__inputs {
+    width: 330px;
+    height: 280px;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .new-contact-form__form {
+    width: 370px;
+    height: 340px;
+  }
+  .new-contact-form__inputs {
+    width: 330px;
+    height: 280px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .new-contact-form__form {
+    width: 400px;
+    height: 380px;
+  }
+  .new-contact-form__inputs {
+    width: 350px;
+    height: 290px;
+    padding: 15px;
+  }
+}

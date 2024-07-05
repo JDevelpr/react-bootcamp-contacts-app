@@ -86,6 +86,9 @@
   .header__navigation {
     width: 520px;
   }
+  .header__item {
+    font-size: 18px;
+  }
   .header__button--green {
     width: 90px;
     height: 30px;
@@ -107,7 +110,7 @@
     width: 90%;
   }
   .header__item {
-    font-size: 18px;
+    font-size: 19px;
   }
   .header__button--green {
     width: 100px;
