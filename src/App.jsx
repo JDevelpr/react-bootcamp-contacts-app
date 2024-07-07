@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import Header from "./components/header";
-import FavoriteContacts from "../src/components/FavoriteContacts/favoriteContacts.jsx";
-import ContactsList from "./components/ContactList/contactsList.jsx";
-import NewContactForm from "./components/newContactForm/newContactForm.jsx";
+import FavoriteContacts from "./components/favoriteContacts.jsx";
+import ContactsList from "./components/contactsList.jsx"
+import NewContactForm from "./components/newContactForm.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
