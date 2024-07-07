@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 const withMountingTimeLogging = (WrappedComponent) => {
-	return class extends Component {
+	class WithMountingTimeLogging extends Component {
 		constructor(props) {
 			super(props);
 			this.startTime = null;
@@ -17,7 +17,11 @@ const withMountingTimeLogging = (WrappedComponent) => {
 			this.startTime = performance.now();
 			return <WrappedComponent {...this.props} />;
 		}
-	};
+	}
+
+	WithMountingTimeLogging.displayName = `WithMountingTimeLogging(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
+
+	return WithMountingTimeLogging;
 };
 
 export default withMountingTimeLogging;

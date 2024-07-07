@@ -1,5 +1,6 @@
 import React from "react";
 import "../../assets/styles/contact.css";
+import PropTypes from 'prop-types';
 import photoUser from "../../assets/img/user-photo-profile.jpg";
 import ButtonContactRemove from "./buttons/buttonRemoveContact";
 import ButtonOptionsContact from "./buttons/buttonOptionsContact";
@@ -26,5 +27,7 @@ function Contact({ isAFavoriteContact }) {
   );
 }
 
-
+Contact.propTypes = {
+  isAFavoriteContact: PropTypes.bool.isRequired,
+}
 export default withMountingTimeLogging(Contact);

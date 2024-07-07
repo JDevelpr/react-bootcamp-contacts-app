@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/styles/newContactForm.css"
+import "../assets/styles/newContactForm.css"
 
 
 function NewContactForm() {

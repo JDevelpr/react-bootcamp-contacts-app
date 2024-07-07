@@ -1,6 +1,6 @@
 import React from "react";
-import "../../assets/styles/favoriteContacts.css";
-import Contact from "../contact/contact.jsx";
+import "../assets/styles/favoriteContacts.css";
+import Contact from "./contact/contact";
 
 function FavoriteContacts() {
   return (
