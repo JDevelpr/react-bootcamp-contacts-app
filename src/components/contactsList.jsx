@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/contactsList.css";
-import Contact from "./contact/contact";
+import Contact from "../components/contact/contact";
 
 function ContactsList() {
 	return (
@@ -12,10 +12,10 @@ function ContactsList() {
 				</div>
 			</div>
 			<div className="contact-list__list">
-				<Contact isAFavoriteContact={false} />
-				<Contact isAFavoriteContact={false} />
-				<Contact isAFavoriteContact={false} />
-				<Contact isAFavoriteContact={false} />
+				<Contact />
+				<Contact />
+				<Contact />
+				<Contact />
 			</div>
 		</div>
 	);

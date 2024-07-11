@@ -30,4 +30,9 @@ function Contact({ isAFavoriteContact }) {
 Contact.propTypes = {
   isAFavoriteContact: PropTypes.bool.isRequired,
 }
+
+Contact.defaultProps = {
+  isAFavoriteContact: false
+};
+
 export default withMountingTimeLogging(Contact);

@@ -1,20 +1,15 @@
 import React from 'react';
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 import Header from "./components/header";
-import ContactsList from "./components/contactsList.jsx"
-import NewContactForm from "./components/newContactForm.jsx";
+import AppRouter from './routers/AppRouter';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-      <main>
-        {/* <FavoriteContacts />
-        <ContactsList /> */}
-        <NewContactForm />
-        <ContactsList />
-      </main>
-    </div>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 
