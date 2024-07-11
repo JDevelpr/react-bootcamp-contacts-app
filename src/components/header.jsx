@@ -4,7 +4,7 @@ import "../assets/styles/header.css";
 import logoGlobant from "../assets/img/globant-logo.svg";
 
 function Header() {
-  const [activeLink, setActiveLink] = useState("/");
+  const [activeLink, setActiveLink] = useState("/overview");
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
@@ -14,7 +14,7 @@ function Header() {
     <header className="header">
       <div className="header__container-logo">
         <Link to="/overview" href="#" className="header__link-home" onClick={() => handleLinkClick("/overview")}>
-          <img src={logoGlobant} alt="" className={`header__logo ${activeLink === "/overview" ? "header__link--green" : ""}`} />
+          <img src={logoGlobant} alt="logo of Globant" className={`header__logo ${activeLink === "/overview" ? "header__link--green" : ""}`} />
         </Link>
       </div>
       <nav className="header__navigation">
