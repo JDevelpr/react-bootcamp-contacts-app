@@ -37,7 +37,7 @@
 }
 
 .contact-list__list {
-  width: 95%;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-evenly;

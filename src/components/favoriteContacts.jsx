@@ -3,6 +3,7 @@ import "../assets/styles/favoriteContacts.css";
 import Contact from "../components/contact/contact";
 
 function FavoriteContacts() {
+
   return (
     <div className="favorite-contacts">
       <div className="favorite-contacts__container-title">
@@ -12,6 +13,8 @@ function FavoriteContacts() {
         </div>
       </div>
       <div className="favorite-contacts__list">
+        <Contact isAFavoriteContact={true} />
+        <Contact isAFavoriteContact={true} />
         <Contact isAFavoriteContact={true} />
         <Contact isAFavoriteContact={true} />
         <Contact isAFavoriteContact={true} />
