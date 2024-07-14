@@ -3,7 +3,6 @@ import "../assets/styles/favoriteContacts.css";
 import Contact from "../components/contact/contact";
 
 function FavoriteContacts() {
-
   return (
     <div className="favorite-contacts">
       <div className="favorite-contacts__container-title">

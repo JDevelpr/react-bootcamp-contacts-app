@@ -5,9 +5,13 @@ import Contact from "../components/contact/contact";
 function ContactsList() {
 	const [users, setUsers] = useState([]);
 	const getUsers = async () => {
-		const petition = await fetch("https://reqres.in/api/users?page=1");
-		const { data } = await petition.json();
-		setUsers(data);
+		try {
+			const response = await fetch("https://reqres.in/api/users?page=1");
+			const { data } = await response.json();
+			setUsers(data);
+		} catch (error) {
+			console.error("Error fetching users:", error);
+		}
 	}
 	useEffect(() => {
 		getUsers();

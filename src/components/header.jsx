@@ -5,11 +5,9 @@ import logoGlobant from "../assets/img/globant-logo.svg";
 
 function Header() {
   const [activeLink, setActiveLink] = useState("/overview");
-
   const handleLinkClick = (path) => {
     setActiveLink(path);
   };
-
   return (
     <header className="header">
       <div className="header__container-logo">
