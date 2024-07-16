@@ -1,3 +1,4 @@
+// src/components/Overview.jsx
 import React from "react";
 import FavoriteContacts from "../components/favoriteContacts";
 import ContactsList from "../components/contactsList";
@@ -8,7 +9,7 @@ function Overview() {
 			<FavoriteContacts />
 			<ContactsList />
 		</>
-	)
+	);
 }
 
 export default Overview;

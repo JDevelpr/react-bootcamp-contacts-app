@@ -1,8 +1,16 @@
-import React from "react";
+// src/components/FavoriteContacts.jsx
+import React, { useContext } from "react";
 import "../assets/styles/favoriteContacts.css";
-import Contact from "../components/contact/contact";
+import Contact from "../components/contact/contact.jsx";
+import { ContactContext } from "../context/ContactContext";
 
 function FavoriteContacts() {
+  const { state, dispatch } = useContext(ContactContext);
+
+  const handleRemoveFavorite = (contactId) => {
+    dispatch({ type: 'REMOVE_FAVORITE', payload: contactId });
+  };
+
   return (
     <div className="favorite-contacts">
       <div className="favorite-contacts__container-title">
@@ -12,12 +20,17 @@ function FavoriteContacts() {
         </div>
       </div>
       <div className="favorite-contacts__list">
-        <Contact isAFavoriteContact={true} />
-        <Contact isAFavoriteContact={true} />
-        <Contact isAFavoriteContact={true} />
-        <Contact isAFavoriteContact={true} />
-        <Contact isAFavoriteContact={true} />
-        <Contact isAFavoriteContact={true} />
+        {state.favorites.map((user) => (
+          <Contact
+            key={user.id}
+            isAFavoriteContact={true}
+            email={user.email}
+            first_name={user.first_name}
+            last_name={user.last_name}
+            avatar={user.avatar}
+            onRemoveFavorite={() => handleRemoveFavorite(user.id)}
+          />
+        ))}
       </div>
     </div>
   );
