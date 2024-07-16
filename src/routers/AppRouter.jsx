@@ -1,9 +1,10 @@
+// src/routers/AppRouter.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import ContactsList from "../components/contactsList";
-import FavoriteContacts from "../components/favoriteContacts.jsx";
+import FavoriteContacts from "../components/favoriteContacts";
 import AddNewContactView from "../pages/addNewContactView.jsx";
-import Overview from "../pages/overView.jsx";
+import Overview from "../pages/overView";
 
 function AppRouter() {
 	return (

@@ -17,7 +17,7 @@
   margin-top: 30px;
 }
 
-.contacts-list__tittle {
+.contacts-list__title {
   font-size: 28px;
 }
 
@@ -42,6 +42,28 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.contacts-list__pagination {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 0px;
+}
+
+.contacts-list__pagination-button {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(224, 224, 224);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contacts-list__pagination-info {
+  font-weight: 600;
 }
 
 @media (min-width: 375px) {

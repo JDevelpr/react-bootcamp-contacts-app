@@ -1,12 +1,12 @@
+// src/components/contact/Contact.jsx
 import React from "react";
 import "../../assets/styles/contact.css";
 import PropTypes from 'prop-types';
 import photoUser from "../../assets/img/user-photo-profile.jpg";
-import ButtonContactRemove from "./buttons/buttonRemoveContact";
-import ButtonOptionsContact from "./buttons/buttonOptionsContact";
-// import withMountingTimeLogging from "../hoc/withMountingTimeLogging.jsx";
+import ButtonContactRemove from "../contact/buttons/buttonRemoveContact.jsx";
+import ButtonOptionsContact from "../contact/buttons/buttonOptionsContact.jsx";
 
-function Contact({ isAFavoriteContact = false, email = "email@email.com", first_name = "Full", last_name = "Name", avatar = photoUser }) {
+function Contact({ isAFavoriteContact = false, email = "email@email.com", first_name = "Full", last_name = "Name", avatar = photoUser, onAddFavorite, onRemoveFavorite, onDelete }) {
   return (
     <div className="card">
       <div className={`card__avatar ${isAFavoriteContact ? 'card__avatar--contact-favorite' : ''}`}>
@@ -21,19 +21,32 @@ function Contact({ isAFavoriteContact = false, email = "email@email.com", first_
         <p className="card__email">{email}</p>
       </div>
       <div className="card__container-options-contacts">
-        {isAFavoriteContact ? <ButtonContactRemove /> : <ButtonOptionsContact />}
+        {isAFavoriteContact ? <ButtonContactRemove onRemove={onRemoveFavorite} /> : <ButtonOptionsContact onAddFavorite={onAddFavorite} onDelete={onDelete} />}
       </div>
     </div>
   );
 }
 
 Contact.propTypes = {
-  isAFavoriteContact: PropTypes.bool.isRequired,
-  email: PropTypes.string.isRequired,
-  first_name: PropTypes.string.isRequired,
-  last_name: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired
-}
+  isAFavoriteContact: PropTypes.bool,
+  email: PropTypes.string,
+  first_name: PropTypes.string,
+  last_name: PropTypes.string,
+  avatar: PropTypes.string,
+  onAddFavorite: PropTypes.func,
+  onRemoveFavorite: PropTypes.func,
+  onDelete: PropTypes.func
+};
 
-// export default withMountingTimeLogging(Contact);
+Contact.defaultProps = {
+  isAFavoriteContact: false,
+  email: "email@email.com",
+  first_name: "Full",
+  last_name: "Name",
+  avatar: photoUser,
+  onAddFavorite: () => { },
+  onRemoveFavorite: () => { },
+  onDelete: () => { }
+};
+
 export default Contact;
