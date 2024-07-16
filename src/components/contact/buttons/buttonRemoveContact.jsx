@@ -3,7 +3,7 @@ import React from "react";
 import "../../../assets/styles/buttons/buttonRemoveContact.css";
 import PropTypes from 'prop-types';
 
-function ButtonContactRemove({ onRemove }) {
+function ButtonContactRemove({ onRemove = () => { } }) {
 	return (
 		<div className="remove-button">
 			<button className="remove-button__button" onClick={onRemove}>
@@ -20,8 +20,8 @@ ButtonContactRemove.propTypes = {
 	onRemove: PropTypes.func
 };
 
-ButtonContactRemove.defaultProps = {
-	onRemove: () => { }
-};
+// ButtonContactRemove.defaultProps = {
+// 	onRemove: () => { }
+// };
 
 export default ButtonContactRemove;
