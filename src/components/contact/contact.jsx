@@ -38,15 +38,15 @@ Contact.propTypes = {
   onDelete: PropTypes.func
 };
 
-Contact.defaultProps = {
-  isAFavoriteContact: false,
-  email: "email@email.com",
-  first_name: "Full",
-  last_name: "Name",
-  avatar: photoUser,
-  onAddFavorite: () => { },
-  onRemoveFavorite: () => { },
-  onDelete: () => { }
-};
+// Contact.defaultProps = {
+//   isAFavoriteContact: false,
+//   email: "email@email.com",
+//   first_name: "Full",
+//   last_name: "Name",
+//   avatar: photoUser,
+//   onAddFavorite: () => { },
+//   onRemoveFavorite: () => { },
+//   onDelete: () => { }
+// };
 
 export default Contact;

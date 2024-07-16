@@ -3,7 +3,7 @@ import React from "react";
 import "../../../assets/styles/buttons/buttonOptionsContact.css";
 import PropTypes from 'prop-types';
 
-function ButtonOptionsContact({ onAddFavorite, onDelete }) {
+function ButtonOptionsContact({ onAddFavorite = () => { }, onDelete = () => { } }) {
   return (
     <div className="options-contact">
       <button className="options-contact__button --ocb-add-favorite-contact" onClick={onAddFavorite}>
@@ -25,9 +25,9 @@ ButtonOptionsContact.propTypes = {
   onDelete: PropTypes.func
 };
 
-ButtonOptionsContact.defaultProps = {
-  onAddFavorite: () => { },
-  onDelete: () => { }
-};
+// ButtonOptionsContact.defaultProps = {
+//   onAddFavorite: () => { },
+//   onDelete: () => { }
+// };
 
 export default ButtonOptionsContact;
