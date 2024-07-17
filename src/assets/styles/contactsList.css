@@ -63,7 +63,7 @@
 }
 
 .contacts-list__pagination-info {
-  font-weight: 600;
+  font-size: 14px;
 }
 
 @media (min-width: 375px) {
@@ -81,6 +81,9 @@
   }
   .contacts-list__container-line {
     width: 67%;
+  }
+  .contacts-list__pagination {
+    width: 500px;
   }
 }
 
