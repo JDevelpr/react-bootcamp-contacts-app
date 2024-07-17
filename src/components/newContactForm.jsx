@@ -10,7 +10,6 @@ function NewContactForm() {
 
 	const userData = (e) => {
 		e.preventDefault();
-		console.log('Exito');
 		let data = e.target;
 		const user = {
 			avartar: "",
