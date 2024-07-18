@@ -1,4 +1,3 @@
-// src/context/ContactContext.jsx
 import React, { createContext, useReducer, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -15,6 +14,11 @@ const contactReducer = (state, action) => {
             return {
                 ...state,
                 contacts: action.payload
+            };
+        case 'ADD_CONTACT':
+            return {
+                ...state,
+                contacts: [...state.contacts, action.payload]
             };
         case 'ADD_FAVORITE':
             {

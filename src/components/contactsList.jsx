@@ -1,40 +1,28 @@
-// src/components/ContactsList.jsx
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import "../assets/styles/contactsList.css";
 import Contact from "../components/contact/contact";
 import { ContactContext } from "../context/ContactContext";
 
 function ContactsList() {
 	const { state, dispatch } = useContext(ContactContext);
-	const [page, setPage] = useState(1);
-	const [totalPages, setTotalPages] = useState(1);
 
-	const getUsers = async (page) => {
+	const getUsers = async () => {
 		try {
-			const response = await fetch(`https://reqres.in/api/users?page=${page}`);
-			const { data, total_pages } = await response.json();
-			dispatch({ type: 'SET_CONTACTS', payload: data });
-			setTotalPages(total_pages);
+			const responses = await Promise.all([
+				fetch(`https://reqres.in/api/users?page=1`),
+				fetch(`https://reqres.in/api/users?page=2`)
+			]);
+			const data = await Promise.all(responses.map(response => response.json()));
+			const users = data.flatMap(pageData => pageData.data);
+			dispatch({ type: 'SET_CONTACTS', payload: users });
 		} catch (error) {
 			console.error("Error fetching users:", error);
 		}
 	}
 
 	useEffect(() => {
-		getUsers(page);
-	}, [page]);
-
-	const handlePreviousPage = () => {
-		if (page > 1) {
-			setPage(page - 1);
-		}
-	};
-
-	const handleNextPage = () => {
-		if (page < totalPages) {
-			setPage(page + 1);
-		}
-	};
+		getUsers();
+	}, []);
 
 	const handleAddFavorite = (contact) => {
 		dispatch({ type: 'ADD_FAVORITE', payload: contact });
@@ -44,8 +32,19 @@ function ContactsList() {
 		dispatch({ type: 'REMOVE_FAVORITE', payload: contactId });
 	};
 
-	const handleDelete = (contactId) => {
-		dispatch({ type: 'DELETE_CONTACT', payload: contactId });
+	const handleDelete = async (contactId) => {
+		try {
+			const response = await fetch(`https://reqres.in/api/users/${contactId}`, {
+				method: 'DELETE',
+			});
+			if (response.ok) {
+				dispatch({ type: 'DELETE_CONTACT', payload: contactId });
+			} else {
+				console.error("Error deleting contact:", response.statusText);
+			}
+		} catch (error) {
+			console.error("Error deleting contact:", error);
+		}
 	};
 
 	return (
@@ -70,11 +69,6 @@ function ContactsList() {
 						onDelete={() => handleDelete(user.id)}
 					/>
 				))}
-			</div>
-			<div className="contacts-list__pagination">
-				<button className="contacts-list__pagination-button" onClick={handlePreviousPage} disabled={page === 1}>Previous</button>
-				<span className="contacts-list__pagination-info">{page} / {totalPages}</span>
-				<button className="contacts-list__pagination-button" onClick={handleNextPage} disabled={page === totalPages}>Next</button>
 			</div>
 		</div>
 	);
