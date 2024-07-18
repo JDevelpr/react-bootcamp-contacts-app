@@ -85,10 +85,22 @@
   .favorite-contacts__empty-add {
     font-size: 17px;
   }
+  .favorite-contacts__list {
+    width: 90%;
+  }
 }
 
 @media (min-width: 1024px) {
   .favorite-contacts__container-line {
+    width: 80%;
+  }
+  .favorite-contacts__list {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .favorite-contacts__list {
     width: 80%;
   }
 }

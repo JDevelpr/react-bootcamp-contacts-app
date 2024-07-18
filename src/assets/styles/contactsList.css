@@ -85,10 +85,22 @@
   .contacts-list__pagination {
     width: 500px;
   }
+  .contact-list__list {
+    width: 90%;
+  }
 }
 
 @media (min-width: 1024px) {
   .contacts-list__container-line {
+    width: 80%;
+  }
+  .contact-list__list {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact-list__list {
     width: 80%;
   }
 }
