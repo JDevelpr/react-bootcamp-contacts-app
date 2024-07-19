@@ -18,7 +18,7 @@ function Contact({ isAFavoriteContact = false, email = "email@email.com", first_
       </div>
       <div className="card__info">
         <p className="card__name">{`${first_name} ${last_name}`}</p>
-        <p className="card__email">{email}</p>
+        <p className="card__email">{`${email}`}</p>
       </div>
       <div className="card__container-options-contacts">
         {isAFavoriteContact ? <ButtonContactRemove onRemove={onRemoveFavorite} /> : <ButtonOptionsContact onAddFavorite={onAddFavorite} onDelete={onDelete} />}
