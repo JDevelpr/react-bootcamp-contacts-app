@@ -1,6 +1,6 @@
 .card {
   width: 250px;
-  height: 270px;
+  height: 300px;
   background-color: white;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -12,6 +12,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 20px;
+  overflow: hidden;
 }
 
 .card__avatar {
@@ -39,12 +40,16 @@
 }
 
 .card__name {
+  width: 230px;
   font-weight: bold;
   margin: 0;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .card__email {
+  width: 230px;
+  text-align: center;
   color: #888;
   margin: 0;
 }
