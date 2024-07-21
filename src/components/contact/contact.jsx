@@ -1,4 +1,3 @@
-// src/components/contact/Contact.jsx
 import React from "react";
 import "../../assets/styles/contact.css";
 import PropTypes from 'prop-types';
