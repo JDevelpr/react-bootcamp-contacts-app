@@ -1,11 +1,9 @@
-// src/test/FavoriteContacts.test.jsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import FavoriteContacts from '../components/favoriteContacts.jsx';
 import { ContactContext } from '../context/ContactContext';
-import { MemoryRouter } from 'react-router-dom'; // Importa MemoryRouter
-
+import { MemoryRouter } from 'react-router-dom';
 const mockDispatch = vi.fn();
 
 const renderWithContext = (state) => {
